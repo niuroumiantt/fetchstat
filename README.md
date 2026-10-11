@@ -18,7 +18,7 @@ python3 collector.py run
 python3 collector.py verify /实际输出的/package
 ```
 
-所有命令已实现；首次运行需已提交的源码。默认原件和交付包在 `~/.local/share/fetchstat/`，错误日志在 `~/.local/state/fetchstat/`。可用 `--data-root /私有目录`；不把这些目录、资料或账号提交到 Git。
+仓库源码公开，使用标准Ubuntu托管Actions；真实资料保持私有。所有命令已实现；首次运行需已提交的源码。默认原件和交付包在 `~/.local/share/fetchstat/`，错误日志在 `~/.local/state/fetchstat/`。可用 `--data-root /私有目录`；不把这些目录、资料或账号提交到 Git。
 
 ## 首个闭环的明确目标
 

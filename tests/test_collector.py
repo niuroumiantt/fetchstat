@@ -44,6 +44,10 @@ class Acceptance(unittest.TestCase):
         with self.assertRaises(ValueError):allowed('https://user:secret@'+self.source['hosts'][0],self.source['hosts'])
     def test_import_needs_provenance(self):
         with self.assertRaises(ValueError):collect(self.source,self.root/'data',self.native,revision='a'*40)
+    def test_archive_reuse_does_not_invent_observation_time(self):
+        with patch('adapter.extract',return_value=[copy.deepcopy(self.row)]) as extract:
+            collect(self.source,self.root/'data',self.native,'fixture','a'*40)
+            self.assertIsNone(extract.call_args.args[3])
     def test_no_extraction_does_not_fabricate_package(self):
         with patch('adapter.extract',return_value=[]),self.assertRaises(ValueError):
             collect(self.source,self.root/'data',self.native,'fixture','a'*40)

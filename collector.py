@@ -107,7 +107,7 @@ def collect(source, data_root, local=None, provenance=None, revision=None):
     if not meta.exists():
         write_json(meta, {'retrieved_at': retrieved, 'provenance_id': provenance, 'first_seen_at': started})
     first = json.loads(meta.read_text())
-    rows = extract(data, source, original, retrieved or started)
+    rows = extract(data, source, original, retrieved)
     if not rows:
         raise ValueError('registered field not found; original preserved, no invented candidate')
     item_id = source['id'] + ':' + sha[:24]
