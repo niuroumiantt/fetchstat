@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-11",
+  "source_url": "https://www.eia.gov/electricity/monthly/epm_table_grapher.php?t=epmt_5_6_b",
+  "collector_revision": "adb4a700a9cbe27b5ae86cbb99a0a6ea834746ea",
+  "source_sha256": "2d71d12585023e9506bf0bba137293c8564a27a4d6f577a4a20bdcddd4ad422c",
+  "original_bytes": 105709,
+  "real_candidates": 1,
+  "offline_valid": true,
+  "replay_verified": true,
+  "unit_tests_passed": 8,
+  "model_calls": 0,
+  "research_received": false,
+  "adopted": false,
+  "scheduled": false,
+  "limitations": [
+    "Research reception/adoption/website separate; unresolved identity remains a lead"
+  ]
+}
